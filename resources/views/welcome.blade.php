@@ -12,10 +12,10 @@
 
 					<div class="input-group">
 
-						{!! Form::text('cvr', null, ['class' => 'form-control', 'placeholder' => 'Enter CVR number']) !!}
+						{!! Form::text('cvr', null, ['class' => 'form-control', 'placeholder' => 'Company name...']) !!}
 
 					<span class="input-group-btn">
-						{!! Form::submit('Check', ['class'=> 'btn btn-primary']) !!}
+						{!! Form::submit('Go!', ['class'=> 'btn btn-primary']) !!}
 					</span>
 					</div>
 					{!! Form::close() !!}
