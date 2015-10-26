@@ -39,17 +39,11 @@ class WelcomeController extends Controller {
 	{
 		$cvr = $request->get('cvr');
 
-
-
 		$path = app_path() . "/domain/test.py " . $cvr;
-print($path);
-		$output = shell_exec("python " . $path . " 2>&1");
-print($output);exit;
-		$status = $output == 1;
 
-
-
-		$status = true;
+		$output = (int) shell_exec("python " . $path); // add  2>&1 to get errors
+var_dump($output);exit;
+		$status = $output > 0.5;
 
 		return view('welcome')->with('status', $status)->with('cvr', $cvr);
 	}
